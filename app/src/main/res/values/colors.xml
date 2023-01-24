@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="beyaz">#50A5EF</color>
+    <color name="colorPrimary">#0E4A8A</color>
+    <color name="colorPrimaryDark">#D20E4A8A</color>
+    <color name="colorAccent">#adcdc0</color>
+    <color name="button">#2E26A6</color>
+    <color name="white">#FFFFFF</color>
+    <color name="mavi">#345683</color>
+</resources>

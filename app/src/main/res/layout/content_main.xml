@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="#3897D9"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <RelativeLayout
+        android:id="@+id/mainActivitySlider"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/mainActivitySliderFavori"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"></androidx.viewpager.widget.ViewPager>
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/mainActivitysliderCircle"
+            android:layout_width="match_parent"
+
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            app:ci_drawable="@color/colorAccent"
+            app:ci_drawable_unselected="@color/mavi" />
+    </RelativeLayout>
+
+
+    <!--
+
+        <LinearLayout
+            android:id="@+id/sliderLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/mainActivitySliderFavori"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:background="#F2F1EF">
+
+            </androidx.viewpager.widget.ViewPager>
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/mainActivitySliderCircleIndicatorFavori"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                app:ci_drawable="@color/colorAccent"
+                app:ci_drawable_unselected="@color/mavi" />
+        </LinearLayout>
+    -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="3dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3897D9"
+                android:padding="5dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/card_view2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/ilanlarButon"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/mune_buton_back"
+                        android:drawableTop="@drawable/ilanlist"
+                        android:padding="8dp"
+                        android:text="All Ad"
+                        android:textColor="#438785"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/ilanVerButon"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/mune_buton_back"
+                        android:drawableTop="@drawable/ilanver"
+                        android:padding="8dp"
+                        android:text="Puplish Ad"
+                        android:textColor="#438785"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/mune_buton_back"
+                        android:drawableTop="@drawable/favori"
+                        android:padding="8dp"
+                        android:text="Favorite Ad"
+                        android:textColor="#438785"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3897D9"
+                android:padding="5dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/iletisimBilgileri"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/mune_buton_back"
+                        android:drawableTop="@drawable/iletisim"
+                        android:padding="8dp"
+                        android:text="User Information"
+                        android:textColor="#438785"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/mune_buton_back"
+                        android:drawableTop="@drawable/mesaj"
+                        android:padding="8dp"
+                        android:text="Message"
+                        android:textColor="#438785"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/ilanlarimMenuButon"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/mune_buton_back"
+                        android:drawableTop="@drawable/ilanlarim"
+                        android:padding="8dp"
+                        android:text="My Own Ad"
+                        android:textColor="#438785"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
